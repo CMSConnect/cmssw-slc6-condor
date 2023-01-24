@@ -41,4 +41,4 @@ MYPATH="/usr/local/bin-el6:$MYPATH"
 
 #export SINGULARITYENV_PREPEND_PATH="$MYPATH"
 
-cmssw-slc6 -B /usr/local/RedHat6:/usr/local/RedHat6 -B /etc/condor:/etc/condor -B /usr/local/bin:/usr/local/bin -B /etc/ciconnect:/etc/ciconnect -B /var/lib/condor/spool:/var/lib/condor/spool -B /stash:/stash -B /local-scratch:/local-scratch -B /usr/local/bin-el6:/usr/local/bin-el6 -B /usr/local/connect_utils:/usr/local/connect_utils --env CONDOR_LOCATION="$CONDOR_LOCATION" --env PREPEND_PATH="$MYPATH" -- bash -c "${CMD_TO_RUN}; bash"
+cmssw-slc6 -B /usr/local/RedHat6:/usr/local/RedHat6 -B /etc/condor-cc6:/etc/condor -B /etc/group:/etc/group -B /usr/local/bin:/usr/local/bin -B /etc/ciconnect:/etc/ciconnect -B /var/lib/condor/spool:/var/lib/condor/spool -B /stash:/stash -B /local-scratch:/local-scratch -B /usr/local/bin-el6:/usr/local/bin-el6 -B /usr/local/connect_utils:/usr/local/connect_utils --env CONDOR_LOCATION="$CONDOR_LOCATION" --env PREPEND_PATH="$MYPATH" -- bash -c "${CMD_TO_RUN}; bash"
